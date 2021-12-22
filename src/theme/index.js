@@ -8,7 +8,7 @@ const theme = createTheme({
     },
     primary: {
       contrastText: '#ffffff',
-      main: '#15c73d'
+      main: '#6ca61d'
     },
     text: {
       primary: '#172b4d',

@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import {
   Avatar,
   Box,
-  Button,
+  // Button,
   Divider,
   Drawer,
   Hidden,
@@ -12,12 +12,12 @@ import {
   Typography
 } from '@material-ui/core';
 import {
-  AlertCircle as AlertCircleIcon,
+  // AlertCircle as AlertCircleIcon,
   BarChart as BarChartIcon,
   Lock as LockIcon,
-  Settings as SettingsIcon,
+  // Settings as SettingsIcon,
   ShoppingBag as ShoppingBagIcon,
-  User as UserIcon,
+  // User as UserIcon,
   UserPlus as UserPlusIcon,
   Users as UsersIcon
 } from 'react-feather';
@@ -38,23 +38,23 @@ const items = [
   {
     href: '/app/customers',
     icon: UsersIcon,
-    title: 'Customers'
+    title: 'Fees Due'
   },
   {
     href: '/app/products',
     icon: ShoppingBagIcon,
-    title: 'Products'
+    title: 'Grades'
   },
-  {
-    href: '/app/account',
-    icon: UserIcon,
-    title: 'Account'
-  },
-  {
-    href: '/app/settings',
-    icon: SettingsIcon,
-    title: 'Settings'
-  },
+  // {
+  //   href: '/app/account',
+  //   icon: UserIcon,
+  //   title: 'Account'
+  // },
+  // {
+  //   href: '/app/settings',
+  //   icon: SettingsIcon,
+  //   title: 'Settings'
+  // },
   {
     href: '/login',
     icon: LockIcon,
@@ -64,12 +64,12 @@ const items = [
     href: '/register',
     icon: UserPlusIcon,
     title: 'Register'
-  },
-  {
-    href: '/404',
-    icon: AlertCircleIcon,
-    title: 'Error'
   }
+  // {
+  //   href: '/404',
+  //   icon: AlertCircleIcon,
+  //   title: 'Error'
+  // }
 ];
 
 const DashboardSidebar = ({ onMobileClose, openMobile }) => {
@@ -107,16 +107,10 @@ const DashboardSidebar = ({ onMobileClose, openMobile }) => {
           }}
           to="/app/account"
         />
-        <Typography
-          color="textPrimary"
-          variant="h5"
-        >
+        <Typography color="textPrimary" variant="h5">
           {user.name}
         </Typography>
-        <Typography
-          color="textSecondary"
-          variant="body2"
-        >
+        <Typography color="textSecondary" variant="body2">
           {user.jobTitle}
         </Typography>
       </Box>
@@ -141,19 +135,12 @@ const DashboardSidebar = ({ onMobileClose, openMobile }) => {
           p: 2
         }}
       >
-        <Typography
-          align="center"
-          gutterBottom
-          variant="h4"
-        >
+        {/* <Typography align="center" gutterBottom variant="h4">
           Need more?
-        </Typography>
-        <Typography
-          align="center"
-          variant="body2"
-        >
+        </Typography> */}
+        {/* <Typography align="center" variant="body2">
           Upgrade to PRO version and access 20 more screens
-        </Typography>
+        </Typography> */}
         <Box
           sx={{
             display: 'flex',
@@ -161,14 +148,14 @@ const DashboardSidebar = ({ onMobileClose, openMobile }) => {
             pt: 2
           }}
         >
-          <Button
+          {/* <Button
             color="primary"
             component="a"
             href="https://react-material-kit.devias.io"
             variant="contained"
           >
             See PRO version
-          </Button>
+          </Button> */}
         </Box>
       </Box>
     </Box>
@@ -217,8 +204,7 @@ DashboardSidebar.propTypes = {
 };
 
 DashboardSidebar.defaultProps = {
-  onMobileClose: () => {
-  },
+  onMobileClose: () => {},
   openMobile: false
 };
 

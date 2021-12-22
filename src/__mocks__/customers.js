@@ -26,7 +26,7 @@ export default [
     avatarUrl: '/static/images/avatars/avatar_4.png',
     createdAt: 1555016400000,
     email: 'cao.yu@devias.io',
-    name: 'Cao Yu',
+    name: 'Cao Yui',
     phone: '712-351-5711'
   },
   {

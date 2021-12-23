@@ -1,4 +1,7 @@
 Change colors to green -done
+Fix Navigation, let login come first, then dashboard -done
+Fix logout to redirect to login
+
 Remove unnecessary elements
 
 Add necessary pages 

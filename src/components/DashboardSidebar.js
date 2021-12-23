@@ -14,19 +14,19 @@ import {
 import {
   // AlertCircle as AlertCircleIcon,
   BarChart as BarChartIcon,
-  Lock as LockIcon,
+  // Lock as LockIcon,
   // Settings as SettingsIcon,
   ShoppingBag as ShoppingBagIcon,
   // User as UserIcon,
-  UserPlus as UserPlusIcon,
+  // UserPlus as UserPlusIcon,
   Users as UsersIcon
 } from 'react-feather';
 import NavItem from './NavItem';
 
 const user = {
-  avatar: '/static/images/avatars/avatar_6.png',
-  jobTitle: 'Senior Developer',
-  name: 'Katarina Smith'
+  avatar: '/static/images/avatars/avatar_10.png',
+  jobTitle: 'Student',
+  name: 'Akosua Smith'
 };
 
 const items = [
@@ -44,7 +44,7 @@ const items = [
     href: '/app/products',
     icon: ShoppingBagIcon,
     title: 'Grades'
-  },
+  }
   // {
   //   href: '/app/account',
   //   icon: UserIcon,
@@ -55,16 +55,16 @@ const items = [
   //   icon: SettingsIcon,
   //   title: 'Settings'
   // },
-  {
-    href: '/login',
-    icon: LockIcon,
-    title: 'Login'
-  },
-  {
-    href: '/register',
-    icon: UserPlusIcon,
-    title: 'Register'
-  }
+  // {
+  //   href: '/login',
+  //   icon: LockIcon,
+  //   title: 'Login'
+  // },
+  // {
+  //   href: '/register',
+  //   icon: UserPlusIcon,
+  //   title: 'Register'
+  // }
   // {
   //   href: '/404',
   //   icon: AlertCircleIcon,

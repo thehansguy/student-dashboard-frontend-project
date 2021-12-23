@@ -6,13 +6,13 @@ import {
   Box,
   Button,
   Container,
-  Grid,
+  // Grid,
   Link,
   TextField,
   Typography
 } from '@material-ui/core';
-import FacebookIcon from '../icons/Facebook';
-import GoogleIcon from '../icons/Google';
+// import FacebookIcon from '../icons/Facebook';
+// import GoogleIcon from '../icons/Google';
 
 const Login = () => {
   const navigate = useNavigate();
@@ -20,7 +20,7 @@ const Login = () => {
   return (
     <>
       <Helmet>
-        <title>Login | Material Kit</title>
+        <title>Login | Student Dashboard</title>
       </Helmet>
       <Box
         sx={{
@@ -38,7 +38,10 @@ const Login = () => {
               password: 'Password123'
             }}
             validationSchema={Yup.object().shape({
-              email: Yup.string().email('Must be a valid email').max(255).required('Email is required'),
+              email: Yup.string()
+                .email('Must be a valid email')
+                .max(255)
+                .required('Email is required'),
               password: Yup.string().max(255).required('Password is required')
             })}
             onSubmit={() => {
@@ -56,10 +59,7 @@ const Login = () => {
             }) => (
               <form onSubmit={handleSubmit}>
                 <Box sx={{ mb: 3 }}>
-                  <Typography
-                    color="textPrimary"
-                    variant="h2"
-                  >
+                  <Typography color="textPrimary" variant="h2">
                     Sign in
                   </Typography>
                   <Typography
@@ -70,15 +70,8 @@ const Login = () => {
                     Sign in on the internal platform
                   </Typography>
                 </Box>
-                <Grid
-                  container
-                  spacing={3}
-                >
-                  <Grid
-                    item
-                    xs={12}
-                    md={6}
-                  >
+                {/* <Grid container spacing={3}>
+                  <Grid item xs={12} md={6}>
                     <Button
                       color="primary"
                       fullWidth
@@ -90,11 +83,7 @@ const Login = () => {
                       Login with Facebook
                     </Button>
                   </Grid>
-                  <Grid
-                    item
-                    xs={12}
-                    md={6}
-                  >
+                  <Grid item xs={12} md={6}>
                     <Button
                       fullWidth
                       startIcon={<GoogleIcon />}
@@ -105,8 +94,8 @@ const Login = () => {
                       Login with Google
                     </Button>
                   </Grid>
-                </Grid>
-                <Box
+                </Grid> */}
+                {/* <Box
                   sx={{
                     pb: 1,
                     pt: 3
@@ -119,12 +108,12 @@ const Login = () => {
                   >
                     or login with email address
                   </Typography>
-                </Box>
+                </Box> */}
                 <TextField
                   error={Boolean(touched.email && errors.email)}
                   fullWidth
                   helperText={touched.email && errors.email}
-                  label="Email Address"
+                  label="Username or Email Address"
                   margin="normal"
                   name="email"
                   onBlur={handleBlur}
@@ -137,7 +126,7 @@ const Login = () => {
                   error={Boolean(touched.password && errors.password)}
                   fullWidth
                   helperText={touched.password && errors.password}
-                  label="Password"
+                  label="Voucher Code"
                   margin="normal"
                   name="password"
                   onBlur={handleBlur}
@@ -158,14 +147,16 @@ const Login = () => {
                     Sign in now
                   </Button>
                 </Box>
-                <Typography
-                  color="textSecondary"
-                  variant="body1"
-                >
+                <Typography color="textSecondary" variant="body1">
                   Don&apos;t have an account?
-                  {' '}
-                  <Link component={RouterLink} to="/register" variant="h6" underline="hover">
-                    Sign up
+                  <Link
+                    component={RouterLink}
+                    to="/register"
+                    variant="h6"
+                    underline="hover"
+                  >
+                    {' '}
+                    Register
                   </Link>
                 </Typography>
               </form>
